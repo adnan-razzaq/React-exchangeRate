@@ -30,8 +30,9 @@ export default function App() {
     };
     getdata().then((res) => {
       const data = [res.base, ...Object.keys(res.rates)];
+      console.log(data);
+
       const firstvalue = Object.keys(res.rates)[0];
-      const rates = res;
       setcodes(data);
       setfromCurrency(res.base);
       settoCurrency(firstvalue);
